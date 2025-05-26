@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 5 - Alignment and Reordering</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    .box {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .row.centered {
+      height: 150px;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+
+  <h3>Exercise 5.1: Center Content</h3>
+  <div class="row justify-content-center align-items-center centered">
+    <div class="col-4 box">
+      Centered Box
+    </div>
+  </div>
+
+  <h3 class="mt-5">Exercise 5.2: Reorder Columns</h3>
+  <div class="row">
+    <div class="col-md-6 order-md-2 box">
+      Column ordered second on md and larger screens
+    </div>
+    <div class="col-md-6 order-md-1 box">
+      Column ordered first on md and larger screens
+    </div>
+  </div>
+
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

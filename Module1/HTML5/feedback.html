@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Feedback</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    form {
+      max-width: 500px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #aaa;
+    }
+
+    #eventImage {
+      width: 150px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    #charCount {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Event Feedback</h2>
+
+  <form>
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" placeholder="10-digit number" onblur="validatePhone()" required>
+
+    <label for="eventSelect">Select Event:</label>
+    <select id="eventSelect" onchange="showFee()">
+      <option value="">--Choose an event--</option>
+      <option value="Music Festival">Music Festival - ₹500</option>
+      <option value="Outdoor Yoga">Outdoor Yoga - ₹200</option>
+      <option value="Food Festival">Food Festival - ₹300</option>
+    </select>
+
+    <p class="highlight" id="feeInfo"></p>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" rows="4" placeholder="Type your feedback..." onkeyup="countCharacters()"></textarea>
+    <p id="charCount">Characters: 0</p>
+
+    <button type="button" onclick="showConfirmation()">Submit Feedback</button>
+  </form>
+
+  <img src="images/event1.jpg" alt="Event Preview" id="eventImage" ondblclick="enlargeImage(this)" title="Double-click to enlarge" />
+
+  <script>
+    function validatePhone() {
+      const phone = document.getElementById("phone").value;
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+      }
+    }
+
+    function showFee() {
+      const selected = document.getElementById("eventSelect").value;
+      document.getElementById("feeInfo").textContent = selected ? `You selected: ${selected}` : "";
+    }
+
+    function showConfirmation() {
+      alert("Thank you for your feedback!");
+    }
+
+    function enlargeImage(img) {
+      img.style.width = img.style.width === "150px" ? "300px" : "150px";
+    }
+
+    function countCharacters() {
+      const text = document.getElementById("feedback").value;
+      document.getElementById("charCount").textContent = `Characters: ${text.length}`;
+    }
+  </script>
+
+</body>
+</html>

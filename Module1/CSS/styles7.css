@@ -1,0 +1,13 @@
+/* ===============================
+   9. Multiple Columns in Text
+================================= */
+
+.news-article {
+  column-count: 2;              /* Split into 2 columns */
+  column-gap: 30px;             /* Space between columns */
+  column-rule: 1px solid gray;  /* Vertical rule between columns */
+  padding: 20px;
+  background-color: #fafafa;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+}

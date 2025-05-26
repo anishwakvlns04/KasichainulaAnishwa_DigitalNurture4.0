@@ -1,0 +1,45 @@
+/* ------------------------------
+   Body Styling with Background Image and Fallback Color
+------------------------------- */
+body {
+  background-color: #f0f0f0; /* Fallback background */
+  background-image: url('https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------------------------
+   Header Styling with HEX Color
+------------------------------- */
+.main-header {
+  background-color: #006699; /* HEX */
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ------------------------------
+   Section Styling with RGBA Background
+------------------------------- */
+.event-section {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+  margin: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------
+   Gradient Styling for Section Titles
+------------------------------- */
+.gradient-title {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+  margin-bottom: 15px;
+}

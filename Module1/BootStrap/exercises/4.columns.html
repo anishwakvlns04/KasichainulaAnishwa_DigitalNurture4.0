@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Column Layouts</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    .sidebar { background-color: #f8f9fa; padding: 20px; }
+    .content { background-color: #e9ecef; padding: 20px; }
+    .col-box { background-color: #0d6efd; color: white; padding: 20px; margin-bottom: 10px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>Exercise 4.1: Two-Column Layout</h2>
+    <div class="row">
+      <div class="col-md-3 sidebar">
+        Sidebar (col-md-3)
+      </div>
+      <div class="col-md-9 content">
+        Content Area (col-md-9)
+      </div>
+    </div>
+
+    <hr />
+
+    <h2>Exercise 4.2: Four-Column Equal Width Layout</h2>
+    <div class="row">
+      <div class="col-sm-3 col-6 col-12 col-md-3 col-lg-3 col-xl-3 col-box">Column 1</div>
+      <div class="col-sm-3 col-6 col-12 col-md-3 col-lg-3 col-xl-3 col-box">Column 2</div>
+      <div class="col-sm-3 col-6 col-12 col-md-3 col-lg-3 col-xl-3 col-box">Column 3</div>
+      <div class="col-sm-3 col-6 col-12 col-md-3 col-lg-3 col-xl-3 col-box">Column 4</div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

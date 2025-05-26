@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Promo Video</title>
+  <style>
+    #message {
+      font-weight: bold;
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Promo Video</h1>
+
+  <!-- Video element with controls and oncanplay event -->
+  <video id="promoVideo" width="480" controls oncanplay="videoReady()">
+    <source src="promo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <p id="message"></p>
+
+  <script>
+    // Display message when video is ready to play
+    function videoReady() {
+      document.getElementById('message').textContent = "Video ready to play";
+    }
+
+    // Warn user if they try to leave the page
+    window.onbeforeunload = function(event) {
+      // Customize message in some browsers; others ignore it
+      const message = "Are you sure you want to leave? Your form is not submitted.";
+      event.returnValue = message; // For most browsers
+      return message;              // For some older browsers
+    };
+  </script>
+
+</body>
+</html>

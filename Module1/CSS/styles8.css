@@ -1,0 +1,82 @@
+/* ===============================
+   10. Responsive Web Design with Media Queries
+================================= */
+
+/* Base styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 10vw;  /* 10% left and right padding */
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #4CAF50;
+  padding: 1rem;
+  color: white;
+}
+
+nav {
+  display: flex;               /* Flexbox layout for horizontal nav */
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #45a049;
+}
+
+/* Image styles */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Article styles */
+article {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Media Query for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  
+  body {
+    padding: 0 5vw;  /* reduce side padding */
+  }
+
+  nav {
+    flex-direction: column;  /* Stack nav links vertically */
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;         /* Reduce font size */
+  }
+
+  nav a {
+    padding: 0.75rem 0;
+  }
+
+  article {
+    font-size: 0.9rem;       /* Smaller text */
+    padding: 1rem;
+  }
+
+  .responsive-img {
+    width: 90vw;             /* Smaller images on mobile */
+  }
+}

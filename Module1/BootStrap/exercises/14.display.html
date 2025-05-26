@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 14.1 & 14.2 Display and Visibility</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .sidebar {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <h2>Exercise 14.1: Display and Visibility</h2>
+  <div class="mb-3 p-3 border bg-light d-none d-md-block">
+    <strong>d-none d-md-block:</strong> Hidden on xs and sm, visible block on md+
+  </div>
+
+  <div class="mb-3 p-3 border bg-light d-none d-lg-flex justify-content-center">
+    <strong>d-none d-lg-flex:</strong> Hidden on xs, sm, md, flex on lg+
+  </div>
+
+  <h2>Exercise 14.2: Responsive Sidebar</h2>
+  <div class="container">
+    <div class="row">
+      <!-- Sidebar: hidden below md, shown md and larger -->
+      <aside class="col-md-3 d-none d-md-block sidebar">
+        Sidebar visible on md and larger
+      </aside>
+
+      <main class="col-12 col-md-9">
+        <p>Main content always visible.</p>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

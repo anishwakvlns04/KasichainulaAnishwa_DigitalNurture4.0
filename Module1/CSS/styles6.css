@@ -1,0 +1,36 @@
+/* ===============================
+   8. Box Model & Layout Control
+================================= */
+
+/* Styling event card container */
+.eventCard {
+  border: 2px solid #007BFF;   /* Blue border */
+  padding: 20px;               /* Space inside the border */
+  margin: 15px 0;              /* Space outside the element */
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+}
+
+/* Form input highlighting with outline on focus */
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid #FF6600;  /* Orange outline on focus */
+  outline-offset: 3px;         /* Space between outline and element */
+}
+
+/* Hidden vs None demonstration */
+#hiddenExample {
+  visibility: hidden;  /* Hidden but still takes up space */
+  background-color: lightgray;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+#noneExample {
+  display: none;       /* Hidden and does NOT take space */
+  background-color: lightcoral;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}

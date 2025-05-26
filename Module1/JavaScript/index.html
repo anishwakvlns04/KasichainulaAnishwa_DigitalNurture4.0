@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community Event Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Community Event Portal</h1>
+  <p><strong>Note:</strong> Tasks 1–6 output shown in browser console. Tasks 7–10 are rendered below.</p>
+
+  <div id="event-list"></div> <!-- Task 7 DOM container -->
+
+    <!-- Task 8: Search and Filter -->
+  <div>
+    <label for="categorySelect">Filter by Category:</label>
+    <select id="categorySelect">
+      <option value="All">All</option>
+      <option value="Music">Music</option>
+      <option value="Art">Art</option>
+      <option value="Food">Food</option>
+      <option value="Technology">Technology</option>
+    </select>
+
+    <label for="searchInput">Search by Name:</label>
+    <input type="text" id="searchInput" placeholder="Type to search..." />
+  </div>
+  
+  <div id="loading" style="display:none;">Loading events...</div>    <!-- Task 9 loading spinner -->
+
+  <!-- Task 11  Working with Forms  -->
+<h2>Event Registration Form</h2>
+<form id="registrationForm">
+  <label>
+    Name:
+    <input type="text" name="name" required />
+    <span class="error" id="nameError"></span>
+  </label><br /><br />
+
+  <label>
+    Email:
+    <input type="email" name="email" required />
+    <span class="error" id="emailError"></span>
+  </label><br /><br />
+
+  <label>
+    Select Event:
+    <select name="eventName">
+      <option value="">--Choose an event--</option>
+      <option value="Music Festival">Music Festival</option>
+      <option value="Art Workshop">Art Workshop</option>
+      <option value="Food Fair">Food Fair</option>
+      <option value="Tech Talk">Tech Talk</option>
+    </select>
+    <span class="error" id="eventError"></span>
+  </label><br /><br />
+
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Status message -->
+<div id="submissionStatus" style="margin-top: 10px; font-weight: bold;"></div>
+
+<!-- Include jQuery from CDN (for Task 14) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+

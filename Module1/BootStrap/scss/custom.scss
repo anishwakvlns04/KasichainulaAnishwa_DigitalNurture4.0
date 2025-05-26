@@ -1,0 +1,6 @@
+// Override Bootstrap default variables
+$primary: #e91e63;
+$border-radius: 1rem;
+
+// Then import Bootstrap's full Sass
+@import "../node_modules/bootstrap/scss/bootstrap";

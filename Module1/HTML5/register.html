@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    form {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    output {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Register for an Event</h1>
+
+  <form onsubmit="handleSubmit(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required autofocus>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label for="date">Date of Event:</label>
+    <input type="date" id="date" required>
+
+    <label for="eventType">Select Event:</label>
+    <select id="eventType" required>
+      <option value="">--Choose an event--</option>
+      <option value="music">Music Festival</option>
+      <option value="yoga">Outdoor Yoga</option>
+      <option value="food">Food Festival</option>
+    </select>
+
+    <button type="button" id="clearPrefsBtn">Clear Preferences</button>
+
+
+    <label for="message">Message:</label>
+    <textarea id="message" rows="4" placeholder="Any additional info..."></textarea>
+
+    <button type="submit">Register</button>
+
+    <output id="confirmationMsg"></output>
+  </form>
+
+  
+  <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const eventType = document.getElementById('eventType').value;
+        document.getElementById('confirmationMsg').textContent = `Thank you, ${name}! You've registered for the ${eventType} event.`;
+        // Save preferred event on submit as well
+        localStorage.setItem('preferredEvent', eventType);
+        sessionStorage.setItem('lastRegisteredEvent', eventType);
+      }
+
+      const eventTypeSelect = document.getElementById('eventType');
+
+      eventTypeSelect.addEventListener('change', function() {
+        localStorage.setItem('preferredEvent', eventTypeSelect.value);
+        sessionStorage.setItem('lastSelectedEvent', eventTypeSelect.value);
+      });
+
+      window.onload = function() {
+        const savedEvent = localStorage.getItem('preferredEvent');
+        if (savedEvent) {
+          eventTypeSelect.value = savedEvent;
+        }
+      };
+
+      const clearPrefsBtn = document.getElementById('clearPrefsBtn');
+
+      clearPrefsBtn.addEventListener('click', function() {
+        localStorage.removeItem('preferredEvent');
+        sessionStorage.clear();
+        eventTypeSelect.value = "";
+        alert('Preferences cleared!');
+      });
+</script>
+
+
+</body>
+</html>

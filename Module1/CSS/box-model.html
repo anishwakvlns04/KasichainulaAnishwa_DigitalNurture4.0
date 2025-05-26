@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Box Model & Layout Control</title>
+  <link rel="stylesheet" href="styles6.css" />
+</head>
+<body>
+
+  <h2>Event Cards</h2>
+
+  <div class="eventCard">
+    <h3>Music Festival</h3>
+    <p>Date: 2025-06-15</p>
+    <p>Location: Central Park</p>
+  </div>
+
+  <div class="eventCard">
+    <h3>Outdoor Yoga</h3>
+    <p>Date: 2025-07-10</p>
+    <p>Location: City Plaza</p>
+  </div>
+
+  <h2>Event Registration Form</h2>
+
+  <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+    <label for="event">Select Event:</label><br>
+    <select id="event" name="event">
+      <option value="">--Choose an event--</option>
+      <option value="music">Music Festival</option>
+      <option value="yoga">Outdoor Yoga</option>
+    </select><br><br>
+
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="3" placeholder="Any additional info..."></textarea><br><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <h2>Visibility vs Display</h2>
+  <div id="hiddenExample">This box is hidden with <code>visibility: hidden</code> but still takes up space.</div>
+  <div id="noneExample">This box is hidden with <code>display: none</code> and does NOT take up space.</div>
+
+</body>
+</html>

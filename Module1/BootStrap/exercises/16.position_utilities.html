@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Positioning</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      padding-bottom: 80px; /* space for fixed footer */
+    }
+    .image-container {
+      width: 200px;
+      position: relative;
+    }
+    .badge-overlay {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <h2>Exercise 16.2: Badge over Image</h2>
+  <div class="image-container mb-5">
+    <img src="https://via.placeholder.com/200" alt="Sample" class="img-fluid">
+    <span class="badge bg-danger badge-overlay">New</span>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 position-fixed bottom-0 w-100">
+    Exercise 16.1: Fixed Footer
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

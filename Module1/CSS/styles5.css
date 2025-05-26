@@ -1,0 +1,32 @@
+/* ===============================
+   7. Table Styling
+================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;  /* Remove double borders */
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;          /* Center text in cells */
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) td {
+  background-color: #e6f2e6;   /* Light green zebra stripe */
+}
+
+tr:hover td {
+  background-color: #cce5cc;   /* Highlight row on hover */
+  cursor: pointer;
+}

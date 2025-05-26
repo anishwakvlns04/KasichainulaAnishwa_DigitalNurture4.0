@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 7 - Flexbox Utilities</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    .navbar-custom {
+      background-color: #343a40;
+      padding: 10px;
+    }
+    .navbar-custom a {
+      color: white;
+      margin: 5px 10px;
+      text-decoration: none;
+    }
+    .card-custom {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
+    .card-title {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+
+  <h3>Responsive Navbar</h3>
+  <nav class="navbar-custom d-flex flex-column flex-md-row">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <h3 class="mt-5">Card Layout</h3>
+  <div class="card-custom d-flex justify-content-between align-items-center">
+    <div class="card-title">Card Title</div>
+    <button class="btn btn-primary">Action</button>
+  </div>
+
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
