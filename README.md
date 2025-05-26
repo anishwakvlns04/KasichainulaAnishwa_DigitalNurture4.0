@@ -39,6 +39,12 @@ This repository captures my progress through the Java-FSE Upskilling Handbook pr
 
 📁 Folder: `Module3/`
 
+## Clone and Run
+
+1. Open your terminal or command prompt.  
+2. Clone the repository:  
+   ```bash
+   git clone https://github.com/anishwakvlns04/KasichainulaAnishwa_DigitalNurture4.0.git
 
 
 ## License
