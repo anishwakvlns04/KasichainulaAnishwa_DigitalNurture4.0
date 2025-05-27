@@ -4,20 +4,34 @@ public class GradeCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter marks out of 100: ");
-        int marks = scanner.nextInt();
+        
+        if (scanner.hasNextInt()) {
+            int marks = scanner.nextInt();
 
-        if (marks >= 90 && marks <= 100) {
-            System.out.println("Grade: A");
-        } else if (marks >= 80 && marks < 90) {
-            System.out.println("Grade: B");
-        } else if (marks >= 70 && marks < 80) {
-            System.out.println("Grade: C");
-        } else if (marks >= 60 && marks < 70) {
-            System.out.println("Grade: D");
+            if (marks >= 0 && marks <= 100) {
+                String grade = calculateGrade(marks);
+                System.out.println("Grade: " + grade);
+            } else {
+                System.out.println("Invalid input! Marks should be between 0 and 100.");
+            }
         } else {
-            System.out.println("Grade: F");
+            System.out.println("Invalid input! Please enter a valid integer.");
         }
 
         scanner.close();
+    }
+
+    private static String calculateGrade(int marks) {
+        if (marks >= 90) {
+            return "A";
+        } else if (marks >= 80) {
+            return "B";
+        } else if (marks >= 70) {
+            return "C";
+        } else if (marks >= 60) {
+            return "D";
+        } else {
+            return "F";
+        }
     }
 }
