@@ -1,10 +1,10 @@
-# Module 2 ANSI SQL Exercises Project
+# Module 2 ANSI SQL Exercises 
 
-## Project Overview
+## Overview
 
 This project contains a set of SQL exercises based on a sample event management database. It covers various SQL querying tasks like filtering, joining, aggregation, and data analysis.
 
-## Project Structure
+## File Structure
 
 - `schema/`  
   Contains SQL scripts to create the database schema tables (`create_tables.sql`).
