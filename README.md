@@ -47,6 +47,4 @@ This repository captures my progress through the Java-FSE Upskilling Handbook pr
    git clone https://github.com/anishwakvlns04/KasichainulaAnishwa_DigitalNurture4.0.git
 
 
-## License
 
-This project is licensed under the [MIT License](LICENSE)
