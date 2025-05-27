@@ -5,23 +5,35 @@ interface Playable {
 class Guitar implements Playable {
     @Override
     public void play() {
-        System.out.println("Playing the guitar");
+        System.out.println("🎸 Strumming the guitar...");
     }
 }
 
 class Piano implements Playable {
     @Override
     public void play() {
-        System.out.println("Playing the piano");
+        System.out.println("🎹 Pressing the piano keys...");
+    }
+}
+
+class Drums implements Playable {
+    @Override
+    public void play() {
+        System.out.println("🥁 Beating the drums...");
     }
 }
 
 public class InterfaceDemo {
     public static void main(String[] args) {
-        Playable guitar = new Guitar();
-        Playable piano = new Piano();
+        Playable[] instruments = { new Guitar(), new Piano(), new Drums() };
 
-        guitar.play();
-        piano.play();
+        for (Playable instrument : instruments) {
+            perform(instrument);
+        }
+    }
+
+    private static void perform(Playable instrument) {
+        System.out.print("Now performing: ");
+        instrument.play();
     }
 }
