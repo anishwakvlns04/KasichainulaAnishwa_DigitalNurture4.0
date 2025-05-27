@@ -1,4 +1,4 @@
-### 📁 Module 2 – CSS3 Styling Essentials  
+### 📁 Module 1 – CSS3 Styling 
 **Theme:** *Styling the Local Community Event Portal*
 
 This module focuses on enhancing the appearance and responsiveness of the portal using CSS3. Exercises cover different styling methods, selectors, typography, color schemes, responsive design, and debugging techniques.
