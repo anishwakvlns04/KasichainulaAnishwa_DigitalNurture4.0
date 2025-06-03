@@ -15,9 +15,9 @@ public class MethodOverloadingExample {
     public static void main(String[] args) {
         MethodOverloadingExample example = new MethodOverloadingExample();
 
-        System.out.println("Sum of two ints (5 + 10): " + example.add(5, 10));
-        System.out.println("Sum of two doubles (3.5 + 4.2): " + example.add(3.5, 4.2));
-        System.out.println("Sum of three ints (1 + 2 + 3): " + example.add(1, 2, 3));
+        System.out.println("Sum of two ints : " + example.add(5, 10));
+        System.out.println("Sum of two doubles : " + example.add(3.5, 4.2));
+        System.out.println("Sum of three ints : " + example.add(1, 2, 3));
     }
 }
 

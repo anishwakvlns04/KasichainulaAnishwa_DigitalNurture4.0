@@ -1,17 +1,6 @@
-SELECT 
-    u.full_name,
-    e.title AS event_title,
-    e.city,
-    e.start_date,
-    e.end_date
-FROM 
-    Users u
-JOIN 
-    Registrations r ON u.user_id = r.user_id
-JOIN 
-    Events e ON r.event_id = e.event_id
-WHERE 
-    e.status = 'upcoming'
-    AND u.city = e.city
-ORDER BY 
-    e.start_date;
+SELECT e.title, AVG(f.rating) AS avg_rating, COUNT(*) AS feedback_count
+FROM Feedback f
+JOIN Events e ON f.event_id = e.event_id
+GROUP BY e.event_id
+HAVING COUNT(*) >= 10
+ORDER BY avg_rating DESC;

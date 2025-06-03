@@ -1,9 +1,9 @@
 public class DataTypeDemo {
     public static void main(String[] args) {
         int myInt = 25;
-        float myFloat = 3.14f;
-        double myDouble = 99.99;
-        char myChar = 'A';
+        float myFloat = 6.5f;
+        double myDouble = 87.99;
+        char myChar = 'i';
         boolean myBoolean = true;
 
         System.out.println("Integer: " + myInt);

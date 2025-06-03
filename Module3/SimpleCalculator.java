@@ -2,39 +2,37 @@ import java.util.Scanner;
 
 public class SimpleCalculator {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the first number: ");
-        double firstNum = input.nextDouble();
+        System.out.print("Enter two numbers : ");
+        double num1 = sc.nextDouble();
+        double num2 = sc.nextDouble();
 
-        System.out.print("Enter the second number: ");
-        double secondNum = input.nextDouble();
+        System.out.print("Choose an operation (+, -, *, /): ");
+        char op = sc.next().charAt(0);
 
-        System.out.print("Select operation (+, -, *, /): ");
-        char op = input.next().charAt(0);
-
-        double output;
+        double result;
 
         switch (op) {
             case '+':
-                output = firstNum + secondNum;
-                System.out.println("Result = " + output);
+                result = num1 + num2;
+                System.out.println("Result = " + result);
                 break;
 
             case '-':
-                output = firstNum - secondNum;
-                System.out.println("Result = " + output);
+                result = num1 - num2;
+                System.out.println("Result = " + result);
                 break;
 
             case '*':
-                output = firstNum * secondNum;
-                System.out.println("Result = " + output);
+                result = num1 * num2;
+                System.out.println("Result = " + result);
                 break;
 
             case '/':
-                if (secondNum != 0) {
-                    output = firstNum / secondNum;
-                    System.out.println("Result = " + output);
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    System.out.println("Result = " + result);
                 } else {
                     System.out.println("Cannot divide by zero!");
                 }
@@ -44,6 +42,6 @@ public class SimpleCalculator {
                 System.out.println("Invalid operation selected.");
         }
 
-        input.close();
+    
     }
 }

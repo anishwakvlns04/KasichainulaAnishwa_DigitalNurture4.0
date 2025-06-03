@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class EvenOrOddChecker {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter an integer: ");
-        int number = scanner.nextInt();
-        if (number % 2 == 0) {
-            System.out.println(number + " is even.");
+        int num = sc.nextInt();
+        if (num % 2 == 0) {
+            System.out.println(num+ " is even.");
         } else {
-            System.out.println(number + " is odd.");
+            System.out.println(num+ " is odd.");
         }
-        scanner.close();
+
     }
 }
